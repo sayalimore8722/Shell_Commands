@@ -43,6 +43,7 @@
       tar cvf /dev/rmt/0 ./      # backup cwd into tape
       tar tvf /dev/rmt/0         # list contents of tape
       tar xvf /dev/rmt/0         # extract contents of tape
+      tar zcvf myproject-0.1.tar.gz myproject-0.1
       
 7.  top - Interactively show you the ``top'' processes on a system - the ones consuming the most computing (CPU) time. Press the ``q'' key in top to exit.
     Press the ``k'' key to kill a particular process. Press ``r'' to renice a process.
