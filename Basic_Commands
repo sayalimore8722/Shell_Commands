@@ -1,0 +1,73 @@
+1. ls - Show lists of files or information on the files
+      ls file     # does the file exist?
+      ls -l file  # show information about the file
+      ls *.txt    # show all files ending in .txt
+      ls -lt      # show information about all files in date order
+      ls -lrt     # above reversed in order
+      ls -a       # show all files including hidden files
+      ls dir      # show contents of directory
+      ls -d dir   # does the directory exist?
+      ls -p       # adds meaning characters to ends of filenames
+      ls -R       # show files also in subdirectories of directory
+      ls -1       # show one file per line
+      ls -s       # print the allocated size of each file, in blocks.
+      
+2.  cd - Change current directory
+      cd                     # go to home directory
+      cd ~/papers            # go to /home/user/papers
+      cd ~fred               # go to /home/fred
+      cd dir                 # go to directory (relative)
+      cd /dir1/dir2/dir3...  # go to directory (absolute)
+      cd -                   # go to last directory you were in
+      cd ..                  # go to one directory level up
+      
+3.  mkdir - Make new directory
+      mkdir dir             # creates new directory with name dir
+      mkdir dir1 dir2 dir3  # can simultaneously create multiple directories
+      rm test.txt           # removes file test.txt
+      rm -r test            # recursively deletes all the directory content
+      
+4.  cp - copy file
+      cp file1 file2                      # copy file1 to file2
+      cp file1 directory                  # copy file1 into directory
+      cp file1 file2 file3 ... directory  # copy files into directory
+      cp -R dir1 dir2/                    # copy dir1 into dir2 including subdirectries
+      cp -pR dir1 dir2/                   # copy directory, preserving permissions
+  
+5.  mv - move file/s  
+      mv file1 file2                     # rename file1 to file2
+      mv dir1 dir2                       # rename directory dir1 to dir2
+      mv file1 file2 file3 ... directory # move files into directory
+      
+6.  tar - Combine files into one larger archive file, or extract files from that archive (same as gtar on Linux).
+      tar cvf /dev/rmt/0 ./      # backup cwd into tape
+      tar tvf /dev/rmt/0         # list contents of tape
+      tar xvf /dev/rmt/0         # extract contents of tape
+      
+7.  top - Interactively show you the ``top'' processes on a system - the ones consuming the most computing (CPU) time. Press the ``q'' key in top to exit.
+    Press the ``k'' key to kill a particular process. Press ``r'' to renice a process.
+    
+8.  ps - List processes on system
+
+9.  pwd - shows present working directory
+
+10. kill - Kill, pause or continue a process. Can also be used for killing daemons.
+
+11. Compress files
+    gzip file.fits          # compresses file.fits into file.fits.gz
+    gunzip file.fits.gz     # recovers original file.fits
+    
+12. gtar - GNU version of the tar utility (also called tar on Linux). Store directories and files together into a single archive file.
+Use the normal tar program to backup files to a tape. See info tar for documentation.
+    gtar cf out.tar dir1    # put contents of directory into out.tar
+    gtar czf out.tar.gz dir1 # write compressed tar, out.tar.gz
+    gtar tf in.tar          # list contents of in.tar
+    gtar tzf in.tar.gz      # list contents of compressed in.tar.gz
+    gtar xf in.tar          # extract contents of in.tar here
+    gtar xzf in.tar.gz      # extract compressed in.tar.gz
+    
+15.grep - Look for text in files. List out lines containing text (with filename if more than one file examined).
+    grep "hi there" file1 file2 ... # look for 'hi there' in files
+    grep -i "hi there" filename     # ignore capitals in search
+    cat filename | grep "hi there"  # use pipe
+    grep -v "foo" filename          # list lines that do not include foo
